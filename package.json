@@ -1,0 +1,25 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "some action about webhooks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "ngrok http 3000 && node src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyjazsf/webhooks.git"
+  },
+  "keywords": ["webhooks", "ci"],
+  "author": "yyjazsf <admin@yingyj.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yyjazsf/webhooks/issues"
+  },
+  "homepage": "https://github.com/yyjazsf/webhooks#readme",
+  "dependencies": {
+    "koa": "^2.5.0"
+  }
+}
