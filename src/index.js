@@ -1,8 +1,30 @@
-const Koa = require("koa");
-const App = new Koa();
+import Koa from "koa";
+import Router from "koa-router";
+import bodyParser from "koa-bodyparser";
+import logger from "koa-logger";
+import compress from "koa-compress";
 
-app.use(async ctx => {
-  ctx.body = "webhooks ci";
+import webhooks from "./webhooks";
+
+const app = new Koa();
+const router = new Router();
+
+/**
+ * Environment.
+ */
+const env = process.env.NODE_ENV || "development";
+
+// logging
+if ("test" !== env) {
+  app.use(logger());
+}
+app.use(compress());
+app.use(bodyParser());
+
+router.post("/webhooks", webhooks);
+
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(3000, () => {
+  console.log("server is running");
 });
-
-app.listen(3000);
