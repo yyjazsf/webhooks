@@ -1,0 +1,201 @@
+{
+  "ref": "refs/heads/develop",
+  "before": "0000000000000000000000000000000000000000",
+  "after": "880bbc36a9a08f5bfba795437e4009093d16becf",
+  "created": true,
+  "deleted": false,
+  "forced": false,
+  "base_ref": "refs/heads/master",
+  "compare": "https://github.com/yyjazsf/test-ci/compare/develop",
+  "commits": [],
+  "head_commit": {
+    "id": "880bbc36a9a08f5bfba795437e4009093d16becf",
+    "tree_id": "e83923f1ced8e56e9fa56c95828686008c33e323",
+    "distinct": true,
+    "message": "init",
+    "timestamp": "2018-04-17T09:40:30+08:00",
+    "url":
+      "https://github.com/yyjazsf/test-ci/commit/880bbc36a9a08f5bfba795437e4009093d16becf",
+    "author": {
+      "name": "ivanying.yyj",
+      "email": "ivanying.yyj@alibaba-inc.com"
+    },
+    "committer": {
+      "name": "ivanying.yyj",
+      "email": "ivanying.yyj@alibaba-inc.com"
+    },
+    "added": [
+      ".babelrc",
+      ".editorconfig",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".gitignore",
+      ".postcssrc.js",
+      "README.md",
+      "build/build.js",
+      "build/check-versions.js",
+      "build/logo.png",
+      "build/utils.js",
+      "build/vue-loader.conf.js",
+      "build/webpack.base.conf.js",
+      "build/webpack.dev.conf.js",
+      "build/webpack.prod.conf.js",
+      "config/dev.env.js",
+      "config/index.js",
+      "config/prod.env.js",
+      "index.html",
+      "package.json",
+      "src/App.vue",
+      "src/assets/logo.png",
+      "src/components/HelloWorld.vue",
+      "src/main.js",
+      "src/router/index.js",
+      "static/.gitkeep",
+      "yarn.lock"
+    ],
+    "removed": [],
+    "modified": []
+  },
+  "repository": {
+    "id": 129828974,
+    "name": "test-ci",
+    "full_name": "yyjazsf/test-ci",
+    "owner": {
+      "name": "yyjazsf",
+      "email": "admin@yingyj.com",
+      "login": "yyjazsf",
+      "id": 2438224,
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2438224?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yyjazsf",
+      "html_url": "https://github.com/yyjazsf",
+      "followers_url": "https://api.github.com/users/yyjazsf/followers",
+      "following_url":
+        "https://api.github.com/users/yyjazsf/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yyjazsf/gists{/gist_id}",
+      "starred_url":
+        "https://api.github.com/users/yyjazsf/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yyjazsf/subscriptions",
+      "organizations_url": "https://api.github.com/users/yyjazsf/orgs",
+      "repos_url": "https://api.github.com/users/yyjazsf/repos",
+      "events_url": "https://api.github.com/users/yyjazsf/events{/privacy}",
+      "received_events_url":
+        "https://api.github.com/users/yyjazsf/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "private": false,
+    "html_url": "https://github.com/yyjazsf/test-ci",
+    "description": "test github webhook",
+    "fork": false,
+    "url": "https://github.com/yyjazsf/test-ci",
+    "forks_url": "https://api.github.com/repos/yyjazsf/test-ci/forks",
+    "keys_url": "https://api.github.com/repos/yyjazsf/test-ci/keys{/key_id}",
+    "collaborators_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/yyjazsf/test-ci/teams",
+    "hooks_url": "https://api.github.com/repos/yyjazsf/test-ci/hooks",
+    "issue_events_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/yyjazsf/test-ci/events",
+    "assignees_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/assignees{/user}",
+    "branches_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/yyjazsf/test-ci/tags",
+    "blobs_url": "https://api.github.com/repos/yyjazsf/test-ci/git/blobs{/sha}",
+    "git_tags_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/git/tags{/sha}",
+    "git_refs_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/yyjazsf/test-ci/git/trees{/sha}",
+    "statuses_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/yyjazsf/test-ci/languages",
+    "stargazers_url": "https://api.github.com/repos/yyjazsf/test-ci/stargazers",
+    "contributors_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/contributors",
+    "subscribers_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/subscribers",
+    "subscription_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/subscription",
+    "commits_url": "https://api.github.com/repos/yyjazsf/test-ci/commits{/sha}",
+    "git_commits_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/git/commits{/sha}",
+    "comments_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/comments{/number}",
+    "issue_comment_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/issues/comments{/number}",
+    "contents_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/contents/{+path}",
+    "compare_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/yyjazsf/test-ci/merges",
+    "archive_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/yyjazsf/test-ci/downloads",
+    "issues_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/yyjazsf/test-ci/pulls{/number}",
+    "milestones_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/milestones{/number}",
+    "notifications_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/yyjazsf/test-ci/labels{/name}",
+    "releases_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/releases{/id}",
+    "deployments_url":
+      "https://api.github.com/repos/yyjazsf/test-ci/deployments",
+    "created_at": 1523929192,
+    "updated_at": "2018-04-17T07:38:24Z",
+    "pushed_at": 1523950961,
+    "git_url": "git://github.com/yyjazsf/test-ci.git",
+    "ssh_url": "git@github.com:yyjazsf/test-ci.git",
+    "clone_url": "https://github.com/yyjazsf/test-ci.git",
+    "svn_url": "https://github.com/yyjazsf/test-ci",
+    "homepage": null,
+    "size": 0,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "JavaScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "open_issues_count": 0,
+    "license": null,
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "master",
+    "stargazers": 0,
+    "master_branch": "master"
+  },
+  "pusher": { "name": "yyjazsf", "email": "admin@yingyj.com" },
+  "sender": {
+    "login": "yyjazsf",
+    "id": 2438224,
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2438224?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/yyjazsf",
+    "html_url": "https://github.com/yyjazsf",
+    "followers_url": "https://api.github.com/users/yyjazsf/followers",
+    "following_url":
+      "https://api.github.com/users/yyjazsf/following{/other_user}",
+    "gists_url": "https://api.github.com/users/yyjazsf/gists{/gist_id}",
+    "starred_url":
+      "https://api.github.com/users/yyjazsf/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/yyjazsf/subscriptions",
+    "organizations_url": "https://api.github.com/users/yyjazsf/orgs",
+    "repos_url": "https://api.github.com/users/yyjazsf/repos",
+    "events_url": "https://api.github.com/users/yyjazsf/events{/privacy}",
+    "received_events_url":
+      "https://api.github.com/users/yyjazsf/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

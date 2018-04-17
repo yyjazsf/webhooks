@@ -13,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/yyjazsf/webhooks.git"
   },
-  "keywords": ["webhooks", "ci"],
+  "keywords": [
+    "webhooks",
+    "ci"
+  ],
   "author": "yyjazsf <admin@yingyj.com>",
   "license": "MIT",
   "bugs": {
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/yyjazsf/webhooks#readme",
   "dependencies": {
+    "buffer-equal-constant-time": "^1.0.1",
     "koa": "^2.5.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compress": "^3.0.0",

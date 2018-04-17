@@ -1,13 +1,11 @@
 import Koa from "koa";
-import Router from "koa-router";
 import bodyParser from "koa-bodyparser";
 import logger from "koa-logger";
 import compress from "koa-compress";
 
-import webhooks from "./webhooks";
+import router from "./api/index";
 
 const app = new Koa();
-const router = new Router();
 
 /**
  * Environment.
@@ -20,8 +18,6 @@ if ("test" !== env) {
 }
 app.use(compress());
 app.use(bodyParser());
-
-router.post("/webhooks", webhooks);
 
 app.use(router.routes()).use(router.allowedMethods());
 
