@@ -43,14 +43,15 @@ module.exports = async (ctx, next) => {
     }
   }
   const {
-    repository: { name, pushed_at },
+    repository: { name },
+    head_commit: { timestamp },
     ref,
     pusher
   } = data;
 
-  log(name, ref, pushed_at, sender);
+  log(name, ref, pusher, timestamp);
   log(successLog("start auto build"));
-  const buildLog = await execFile("/src/lib/auto_build.sh", [name]);
+  const buildLog = await execFile(`${__dirname}/src/lib/auto_build.sh`, [name]);
   log(errorLog(buildLog));
   log(successLog("deploy complete"));
   // deploy
