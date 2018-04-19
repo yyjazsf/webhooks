@@ -2,9 +2,6 @@
   "verbose": true,
   "delay": "3000",
   "watch": ["src"],
-  "execMap": {
-    "js": "node --experimental-modules --loader ./src/lib/module-loader.mjs"
-  },
   "env": {
     "NODE_ENV": "development"
   },

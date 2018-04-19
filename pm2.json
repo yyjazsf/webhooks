@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "webhooks",
+      "script": "src/index.js",
+      "instances": 1,
+      "max_memory_restart": "50M"
+    }
+  ]
+}

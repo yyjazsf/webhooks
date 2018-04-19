@@ -1,9 +1,9 @@
-import Koa from "koa";
-import bodyParser from "koa-bodyparser";
-import logger from "koa-logger";
-import compress from "koa-compress";
+const Koa = require("koa");
+const bodyParser = require("koa-bodyparser");
+const logger = require("koa-logger");
+const compress = require("koa-compress");
 
-import router from "./api/index";
+const router = require("./api/index");
 
 const app = new Koa();
 

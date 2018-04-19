@@ -1,3 +1,7 @@
+/**
+ * 等Nodejs正式 支持es6 modules
+ * 目前pm2 node --experimental-modules --loader ./src/lib/module-loader.mjs 不好搞
+ */
 import url from "url";
 import path from "path";
 import process from "process";
@@ -54,6 +58,7 @@ export function resolve(specifier, parentModuleURL = baseURL, defaultResolve) {
 
   // 判断是否为*.js、*.mjs、*.json文件
   const resolved = new url.URL(specifier, parentModuleURL);
+
   const ext = path.extname(resolved.pathname);
   // 不写后缀就是.js
   if (!JS_EXTENSIONS.has(ext) && !JSON_EXTENSIONS.has(ext)) {

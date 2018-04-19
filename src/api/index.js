@@ -1,8 +1,8 @@
-import Router from "koa-router";
-import webhooks from "./webhooks";
+const Router = require("koa-router");
+const webhooks = require("./webhooks");
 
 const router = new Router();
 
 router.post("/webhooks", webhooks);
 
-export default router;
+module.exports = router;
