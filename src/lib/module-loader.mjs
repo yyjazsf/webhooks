@@ -23,7 +23,10 @@ const builtins = Module.builtinModules;
 const JS_EXTENSIONS = new Set([".js", ".mjs"]);
 const JSON_EXTENSIONS = new Set([".json"]);
 
-export function resolve(specifier, parentModuleURL, defaultResolve) {
+const baseURL = new url.URL("file://");
+baseURL.pathname = `${process.cwd()}/`;
+
+export function resolve(specifier, parentModuleURL = baseURL, defaultResolve) {
   // 判断是否为Node原生模块
   if (builtins.includes(specifier)) {
     return {
