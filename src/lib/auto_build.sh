@@ -11,7 +11,7 @@ echo "path=$WEB_PATH"
 echo "pull source code..."
 git reset --hard origin/master
 git clean -f
-git pull origin/master
+git pull origin master
 git checkout master
 
 echo "install dependencies..."

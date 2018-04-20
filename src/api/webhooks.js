@@ -30,7 +30,7 @@ function verify(signature, data) {
 }
 
 module.exports = async (ctx, next) => {
-  ctx.body = { ok: true };
+  // ctx.body = { ok: true };
   const signature = ctx.request.header["x-hub-signature"];
   const event = ctx.request.header["x-github-event"]; // push
   if (event !== "push") {
@@ -43,15 +43,24 @@ module.exports = async (ctx, next) => {
     }
   }
   const {
-    repository: { name, pushed_at },
+    repository: { name },
+    head_commit: { timestamp },
     ref,
     pusher
   } = data;
 
-  log(name, ref, pushed_at, sender);
+  log(name, ref, pusher, timestamp);
   log(successLog("start auto build"));
-  const buildLog = await execFile("/src/lib/auto_build.sh", [name]);
-  log(errorLog(buildLog));
+  const buildLog = await execFile("sh", [
+    `${process.cwd()}/src/lib/auto_build.sh`,
+    name
+  ]);
+  ctx.body = buildLog;
+  // buildLog.stderr.toLocaleLowerCase().indexOf("error") !== -1
+  // if (buildLog.stdout.toLocaleLowerCase().indexOf("error") !== -1) {
+  //   log(errorLog(buildLog.stdout));
+  // }
+  log(buildLog);
   log(successLog("deploy complete"));
   // deploy
 
