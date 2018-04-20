@@ -4,7 +4,7 @@
   "description": "some action about webhooks",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 startOrReload pm2.json",
+    "start": "yarn && pm2 startOrReload pm2.json",
     "dev": "nodemon ./src/index.js",
     "ngrok": "ngrok http 3000",
     "rm": "pm2 stop webhooks && pm2 delete webhooks"
@@ -13,10 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/yyjazsf/webhooks.git"
   },
-  "keywords": [
-    "webhooks",
-    "ci"
-  ],
+  "keywords": ["webhooks", "ci"],
   "author": "yyjazsf <admin@yingyj.com>",
   "license": "MIT",
   "bugs": {
