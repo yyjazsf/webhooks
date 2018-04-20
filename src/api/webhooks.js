@@ -51,8 +51,15 @@ module.exports = async (ctx, next) => {
 
   log(name, ref, pusher, timestamp);
   log(successLog("start auto build"));
-  const buildLog = await execFile(`${__dirname}/src/lib/auto_build.sh`, [name]);
-  log(errorLog(buildLog));
+  const buildLog = await execFile("sh", [
+    `${process.cwd()}/src/lib/auto_build.sh`,
+    name
+  ]);
+  // buildLog.stderr.toLocaleLowerCase().indexOf("error") !== -1
+  // if (buildLog.stdout.toLocaleLowerCase().indexOf("error") !== -1) {
+  //   log(errorLog(buildLog.stdout));
+  // }
+  log(buildLog);
   log(successLog("deploy complete"));
   // deploy
 
