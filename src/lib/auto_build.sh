@@ -18,5 +18,5 @@ echo "install dependencies..."
 yarn
 # yarn test
 
-# yarn reload
+yarn start
 echo "Finished."

@@ -30,7 +30,6 @@ function verify(signature, data) {
 }
 
 module.exports = async (ctx, next) => {
-  ctx.body = { ok: true };
   const signature = ctx.request.header["x-hub-signature"];
   const event = ctx.request.header["x-github-event"]; // push
   if (event !== "push") {
@@ -39,7 +38,11 @@ module.exports = async (ctx, next) => {
   const data = ctx.request.body;
   if (signature) {
     if (!verify(signature, data)) {
-      throw new Error("X-Hub-Signature does not match blob signature");
+      ctx.body = {
+        state: "fail",
+        message: "X-Hub-Signature does not match blob signature"
+      };
+      return;
     }
   }
   const {
@@ -48,6 +51,14 @@ module.exports = async (ctx, next) => {
     ref,
     pusher
   } = data;
+  if (ref !== "refs/heads/master") {
+    ctx.body = {
+      state: "fail",
+      message: `branch is not master,but get ${ref}`
+    };
+    return;
+  }
+  ctx.body = { state: "success" };
 
   log(name, ref, pusher, timestamp);
   log(successLog("start auto build"));
@@ -59,9 +70,8 @@ module.exports = async (ctx, next) => {
   // if (buildLog.stdout.toLocaleLowerCase().indexOf("error") !== -1) {
   //   log(errorLog(buildLog.stdout));
   // }
-  log(buildLog);
+  log(JSON.stringify(buildLog));
   log(successLog("deploy complete"));
-  // deploy
 
   await next();
 };
